@@ -467,29 +467,42 @@ button {
    -------------------------------------------------------------------------- */
 .rb-hero-section {
   position: relative;
-  padding: 3.5rem 0 4.5rem 0;
-  background-color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: #0b1528;
+  background-image: url('../images/hero-multimodal.jpg');
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.rb-hero-pattern {
+.rb-hero-section > .rb-container {
+  width: 100%;
+}
+
+/* Hero Gradient Overlay:
+   Horizontal gradient with 0% (rgba(255, 255, 255, 1)) behind text on the right
+   fading to 50% (rgba(255, 255, 255, 0)) at the center to ensure the text layer
+   retains crisp contrast while multimodal visuals on the left remain visible.
+*/
+.rb-hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(rgba(175, 185, 202, 0.36) 1.25px, transparent 1.25px);
-  background-size: 22px 22px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
   pointer-events: none;
-  mask-image: radial-gradient(ellipse at 30% 25%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 75%);
-  -webkit-mask-image: radial-gradient(ellipse at 30% 25%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 75%);
   z-index: 1;
 }
 
 .rb-hero-content {
   position: relative;
   z-index: 2;
-  padding-right: 1rem;
+  padding: 1rem 0;
 }
 
 .rb-hero-title {
@@ -509,34 +522,11 @@ button {
 }
 
 .rb-hero-desc {
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--rb-color-body);
-  max-width: 460px;
-  line-height: 1.68;
+  max-width: 480px;
+  line-height: 1.7;
   margin-bottom: 2rem;
-}
-
-.rb-hero-visual-wrapper {
-  position: relative;
-  z-index: 2;
-}
-
-.rb-hero-visual {
-  position: relative;
-  border-radius: 24px 24px 75px 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(15, 25, 40, 0.12);
-}
-
-.rb-hero-visual img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.rb-hero-visual:hover img {
-  transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------------
@@ -1255,12 +1245,20 @@ a.rb-footer-contact-val:hover {
   .rb-nav-menu-wrapper {
     display: none;
   }
+  .rb-hero-section {
+    min-height: auto;
+    padding: 4.5rem 0 4rem 0;
+    background-position: center center;
+  }
+  .rb-hero-overlay {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 100%);
+  }
   .rb-hero-title {
     font-size: 2.6rem;
   }
   .rb-hero-content {
     padding-right: 0;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
   }
   .rb-services-header {
     flex-direction: column;
@@ -1301,9 +1299,6 @@ a.rb-footer-contact-val:hover {
   .rb-cta-card {
     padding: 2.2rem 1.4rem;
     border-radius: var(--rb-radius-lg);
-  }
-  .rb-hero-visual {
-    border-radius: 20px 20px 50px 20px;
   }
   .rb-footer-bottom {
     flex-direction: column;
