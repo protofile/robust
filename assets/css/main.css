@@ -467,14 +467,14 @@ button {
    -------------------------------------------------------------------------- */
 .rb-hero-section {
   position: relative;
-  min-height: 80vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
-  padding: 5rem 0;
-  background-color: #0b1528;
+  padding: 5.5rem 0 5rem 0;
+  background-color: #ffffff;
   background-image: url('../images/hero-multimodal.jpg');
   background-size: cover;
-  background-position: center left;
+  background-position: right center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
@@ -484,9 +484,9 @@ button {
 }
 
 /* Hero Gradient Overlay:
-   Horizontal gradient with 0% (rgba(255, 255, 255, 1)) behind text on the right
-   fading to 50% (rgba(255, 255, 255, 0)) at the center to ensure the text layer
-   retains crisp contrast while multimodal visuals on the left remain visible.
+   Left-to-right gradient starting with 0% (rgba(255, 255, 255, 1)) on the left
+   behind the text, fading to 50% / transparent towards the center-right to ensure
+   maximum text contrast on the left while multimodal vehicles on the right remain crisp.
 */
 .rb-hero-overlay {
   position: absolute;
@@ -494,7 +494,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 50%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 38%, rgba(255, 255, 255, 0) 65%);
   pointer-events: none;
   z-index: 1;
 }
@@ -505,6 +505,21 @@ button {
   padding: 1rem 0;
 }
 
+/* Outline Badge Pill (Matches Hero Design) */
+.rb-badge-tag-outline {
+  display: inline-block;
+  padding: 0.38rem 1.15rem;
+  border: 1.5px solid #d4a34b;
+  border-radius: 50px;
+  background: transparent;
+  color: #b37f26;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
 .rb-hero-title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -512,6 +527,11 @@ button {
   color: var(--rb-color-heading);
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+}
+
+.rb-hero-title-gold {
+  color: #c79434;
+  display: block;
 }
 
 .rb-hero-title-gradient {
@@ -527,6 +547,44 @@ button {
   max-width: 480px;
   line-height: 1.7;
   margin-bottom: 2rem;
+}
+
+/* Explore Services Pill Button (Matching Design) */
+.rb-btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.75rem;
+  background: #a6731e;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all var(--rb-transition-fast);
+  box-shadow: 0 4px 14px rgba(166, 115, 30, 0.22);
+}
+
+.rb-btn-explore:hover {
+  background: #906316;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(166, 115, 30, 0.32);
+}
+
+.rb-btn-explore .rb-btn-sep {
+  opacity: 0.6;
+  font-weight: 300;
+  margin: 0 0.15rem;
+}
+
+.rb-btn-explore .rb-btn-icon {
+  font-size: 1rem;
+  transition: transform var(--rb-transition-fast);
+}
+
+.rb-btn-explore:hover .rb-btn-icon {
+  transform: translateX(3px);
 }
 
 /* --------------------------------------------------------------------------
