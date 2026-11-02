@@ -644,7 +644,12 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
+  cursor: pointer;
   transition: all var(--rb-transition-fast);
+}
+
+.rb-slider-btn i {
+  pointer-events: none;
 }
 
 .rb-slider-btn:hover {
@@ -664,6 +669,7 @@ button {
 .rb-services-carousel .owl-item {
   display: flex;
   height: auto;
+  flex-shrink: 0;
 }
 
 .rb-service-carousel-slide {

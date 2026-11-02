@@ -16,12 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
       $servicesCarousel.owlCarousel({
         items: 4,
         loop: true,
-        rewind: true,
         margin: 24,
         nav: false,
         dots: false,
         autoplay: false,
+        slideBy: 1,
         smartSpeed: 450,
+        mouseDrag: true,
+        touchDrag: true,
         responsive: {
           0: {
             items: 1,
@@ -43,14 +45,17 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       // Custom Navigation Controls
-      jQuery('#rbSliderNext').on('click', function () {
+      jQuery('#rbSliderNext').on('click', function (e) {
+        e.preventDefault();
         $servicesCarousel.trigger('next.owl.carousel');
       });
 
-      jQuery('#rbSliderPrev').on('click', function () {
+      jQuery('#rbSliderPrev').on('click', function (e) {
+        e.preventDefault();
         $servicesCarousel.trigger('prev.owl.carousel');
       });
     }
+  }
   // ------------------------------------------------------------------------
   // 2. Sticky Header Scroll Effect
   // ------------------------------------------------------------------------
