@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const isServicesPage = window.location.pathname.endsWith('our-services.html');
     const isExpertisePage = window.location.pathname.endsWith('expertise.html');
     const isContactPage = window.location.pathname.endsWith('contact-us.html');
+    const isArticlesPage = window.location.pathname.endsWith('articles.html') || window.location.pathname.endsWith('detail-article.html');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -144,6 +145,14 @@ document.addEventListener('DOMContentLoaded', function () {
           } else if (isContactPage) {
             navLinks.forEach(link => {
               if (link.getAttribute('href') === 'contact-us.html') {
+                link.classList.add('active');
+              } else if (!link.getAttribute('href').startsWith('#')) {
+                link.classList.remove('active');
+              }
+            });
+          } else if (isArticlesPage) {
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === 'articles.html') {
                 link.classList.add('active');
               } else if (!link.getAttribute('href').startsWith('#')) {
                 link.classList.remove('active');
