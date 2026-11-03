@@ -84,7 +84,12 @@ body {
   overflow-x: clip;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--rb-font-heading);
   color: var(--rb-color-heading);
   font-weight: 700;
@@ -472,14 +477,14 @@ button {
   align-items: center;
   padding: 5.5rem 0 5rem 0;
   background-color: #ffffff;
-  background-image: url('../images/hero-multimodal.jpg');
+  background-image: url('../images/hero.jpg');
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
-.rb-hero-section > .rb-container {
+.rb-hero-section>.rb-container {
   width: 100%;
 }
 
@@ -708,7 +713,8 @@ button {
   width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: var(--rb-radius-md);
-  overflow: visible; /* To allow floating icon badge */
+  overflow: visible;
+  /* To allow floating icon badge */
   background-color: #eaeff5;
 }
 
@@ -1294,9 +1300,11 @@ a.rb-footer-contact-val:hover {
   .rb-hero-title {
     font-size: 3rem;
   }
+
   .rb-nav-menu-wrapper {
     gap: 1.4rem;
   }
+
   .rb-nav-links-group {
     gap: 1.4rem;
   }
@@ -1306,40 +1314,50 @@ a.rb-footer-contact-val:hover {
   .rb-header {
     padding: 0.9rem 0;
   }
+
   .rb-nav-menu-wrapper {
     display: none;
   }
+
   .rb-hero-section {
     min-height: auto;
     padding: 4.5rem 0 4rem 0;
     background-position: center center;
   }
+
   .rb-hero-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.88) 100%);
   }
+
   .rb-hero-title {
     font-size: 2.6rem;
   }
+
   .rb-hero-content {
     padding-right: 0;
     margin-bottom: 0;
   }
+
   .rb-services-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+
   .rb-services-meta {
     width: 100%;
     justify-content: space-between;
   }
+
   .rb-about-left {
     padding-right: 0;
     margin-bottom: 2.5rem;
   }
+
   .rb-cta-card {
     padding: 3rem 2rem;
   }
+
   .rb-cta-title {
     font-size: 2.1rem;
   }
@@ -1349,21 +1367,26 @@ a.rb-footer-contact-val:hover {
   .rb-hero-title {
     font-size: 2.1rem;
   }
+
   .rb-section-title,
   .rb-about-title {
     font-size: 1.9rem;
   }
+
   .rb-value-item {
     grid-template-columns: 1fr;
     gap: 0.4rem;
   }
+
   .rb-stats-row {
     grid-template-columns: 1fr;
   }
+
   .rb-cta-card {
     padding: 2.2rem 1.4rem;
     border-radius: var(--rb-radius-lg);
   }
+
   .rb-footer-bottom {
     flex-direction: column;
     align-items: flex-start;
@@ -1384,8 +1407,13 @@ a.rb-footer-contact-val:hover {
   color: #475569;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
   transition: transform var(--rb-transition-base), background-color var(--rb-transition-base), box-shadow var(--rb-transition-base);
+}
+
+.rb-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .rb-image-placeholder:hover {
@@ -1565,7 +1593,7 @@ a.rb-footer-contact-val:hover {
 .rb-deliver-card {
   position: relative;
   background: linear-gradient(135deg, rgba(12, 16, 23, 0.94) 0%, rgba(8, 11, 15, 0.96) 100%),
-              url('../images/cta-bg.jpg') center/cover no-repeat;
+    url('../images/cta-bg.jpg') center/cover no-repeat;
   border-radius: var(--rb-radius-xl);
   padding: 3.8rem 3.2rem;
   color: #ffffff;
@@ -1670,19 +1698,23 @@ a.rb-footer-contact-val:hover {
 
 /* Responsive adjustments for About Page */
 @media (max-width: 991.98px) {
+
   .rb-about-page-title,
   .rb-values-main-title,
   .rb-deliver-heading,
   .rb-reach-title {
     font-size: 2.1rem;
   }
+
   .rb-deliver-card {
     padding: 2.8rem 2rem;
   }
+
   .rb-deliver-content {
     padding-right: 0;
     margin-bottom: 2rem;
   }
+
   .rb-vm-stats-card {
     flex-direction: column;
     align-items: flex-start;
@@ -1691,16 +1723,19 @@ a.rb-footer-contact-val:hover {
 }
 
 @media (max-width: 767.98px) {
+
   .rb-about-page-title,
   .rb-values-main-title,
   .rb-deliver-heading,
   .rb-reach-title {
     font-size: 1.85rem;
   }
+
   .rb-deliver-grid {
     grid-template-columns: 1fr;
     gap: 0.85rem;
   }
+
   .rb-deliver-card {
     padding: 2.2rem 1.4rem;
     border-radius: var(--rb-radius-lg);
@@ -1911,14 +1946,17 @@ a.rb-footer-contact-val:hover {
     border-radius: 20px;
     padding: 1.25rem 1.4rem;
   }
+
   .rb-service-detail-box {
     padding-left: 0;
     margin-top: 2.5rem;
   }
+
   .rb-operations-content {
     padding-left: 0;
     margin-top: 2rem;
   }
+
   .rb-service-detail-title,
   .rb-operations-title {
     font-size: 2.1rem;
@@ -1930,6 +1968,7 @@ a.rb-footer-contact-val:hover {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .rb-service-detail-title,
   .rb-operations-title {
     font-size: 1.85rem;
@@ -2087,14 +2126,17 @@ a.rb-footer-contact-val:hover {
 
 /* Responsive adjustments for Expertise page */
 @media (max-width: 991.98px) {
+
   .rb-expertise-hero-title,
   .rb-approach-title {
     font-size: 2.1rem;
   }
+
   .rb-approach-content {
     padding-left: 0;
     margin-top: 2rem;
   }
+
   .rb-placeholder-expertise-panoramic {
     aspect-ratio: 16 / 9;
     min-height: 240px;
@@ -2102,13 +2144,16 @@ a.rb-footer-contact-val:hover {
 }
 
 @media (max-width: 767.98px) {
+
   .rb-expertise-hero-title,
   .rb-approach-title {
     font-size: 1.85rem;
   }
+
   .rb-capability-strip-inner {
     gap: 1.25rem;
   }
+
   .rb-capability-item {
     font-size: 0.8rem;
   }
@@ -2140,7 +2185,8 @@ a.rb-footer-contact-val:hover {
   position: relative;
   border-radius: 28px;
   overflow: visible;
-  background: #18202b;
+  background: url(../images/bg-contact.jpg) no-repeat center;
+  background-size: cover;
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 3.5rem 3rem 4rem 3rem;
   box-shadow: 0 16px 45px rgba(10, 14, 20, 0.12);
@@ -2231,13 +2277,16 @@ a.rb-footer-contact-val:hover {
   .rb-contact-page-title {
     font-size: 2.1rem;
   }
+
   .rb-contact-banner-wrapper {
     padding: 2.5rem 1.75rem;
   }
+
   .rb-contact-info-cards-group {
     max-width: 100%;
     margin-bottom: 1.5rem;
   }
+
   .rb-contact-form-card {
     margin-bottom: 0;
     margin-top: 1.5rem;
@@ -2249,10 +2298,12 @@ a.rb-footer-contact-val:hover {
   .rb-contact-page-title {
     font-size: 1.85rem;
   }
+
   .rb-contact-banner-wrapper {
     padding: 2rem 1.25rem;
     border-radius: 20px;
   }
+
   .rb-contact-form-card {
     border-radius: 18px;
   }
@@ -2997,13 +3048,16 @@ a.rb-footer-contact-val:hover {
   .rb-article-detail-wrap {
     padding-right: 0;
   }
+
   .rb-articles-sidebar {
     position: static;
     margin-top: 3rem;
   }
+
   .rb-article-card-row {
     flex-direction: column;
   }
+
   .rb-article-card-thumb-wrap {
     width: 100%;
     height: 220px;
@@ -3014,14 +3068,12 @@ a.rb-footer-contact-val:hover {
   .rb-articles-page-title {
     font-size: 2rem;
   }
+
   .rb-article-detail-title {
     font-size: 1.75rem;
   }
+
   .rb-article-card-content {
     padding: 1.25rem;
   }
 }
-
-
-
-
